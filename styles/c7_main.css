@@ -17,6 +17,51 @@ body {
 a:focus, a:hover {
 	font-style: italic;
 }
+
+#nav_menu ul{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	position: relative;
+}
+
+#nav_menu li {
+	float: left;
+}
+
+#nav_menu li a {
+	display: inline-block;
+	width: 160px;
+	text-align: center;
+	padding-top: 1em;
+	padding-bottom: 1em;
+	text-decoration: none;
+	background-color: #800000;
+	color: white;
+	font-weight: bold;
+}
+
+#nav_menu a.current{
+	color: yellow;
+}
+#nav_menu ul ul {
+	display: none;
+	position: absolute;
+	top: 100%;
+}
+#nav_menu ul ul li {
+	float: none;
+}
+#nav_menu ul li:hover > ul {
+	display: block;
+}
+#nav_menu > ul::after {
+	content: "";
+	clear: both;
+	display: block;
+}
+
+
 /* the styles for the header */
 header {
 	padding: 1.5em 0 2em 0;
@@ -112,6 +157,11 @@ aside h3 {
 aside img {
 	padding-bottom: 1em;
 }
+
+.ticketPackages li{
+	list-style-type: circle;
+}
+
 
 /* the styles for the footer */
 footer {
